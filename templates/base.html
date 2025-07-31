@@ -9,17 +9,21 @@
     <title>{{ title }}</title>
 
     <!-- Link -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/png" sizes="16x16" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/png" sizes="192x192" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/png" sizes="512x512" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="" />
+    <link rel="icon" type="image/png" sizes="16x16" href="" />
+    <link rel="icon" type="image/png" sizes="32x32" href="" />
+    <link rel="icon" type="image/png" sizes="192x192" href="" />
+    <link rel="icon" type="image/png" sizes="512x512" href="" />
+    <link rel="icon" type="image/x-icon" href="" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/utilities.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 </head>
+
 
 <body>
     <header id="hero">
@@ -28,7 +32,7 @@
             <div class="container">
                 <!-- Logo -->
                 <h1 id="logo">
-                    <a href="/"><img src="https://avatars.githubusercontent.com/u/56185972" alt="Logo" /></a>
+                    <a href="/"><img class="" src="{{ url_for('static', filename='logo_main.png') }}" alt="Profile Image" /></a>
                 </h1>
 
                 <!-- Navbar links -->
@@ -37,8 +41,7 @@
                     <li><a class="nav-link" href="{{ url_for('contact_page') }}">CONTACT</a></li>
                     <!-- <li><a class="nav-link" href="#">BlOG</a></li> -->
                     <li>
-                        <a class="btn btn-primary" href="https://github.com/dmdhrumilmistry">RESUME <i
-                                class="fas fa-arrow-right"></i></a>
+                        <a class="btn btn-primary" href="{{ url_for('static', filename='resume.pdf') }}" target="_blank">RESUME <i class="fas fa-arrow-right"></i></a>
                     </li>
 
                     <!-- Toggle switch -->
@@ -70,26 +73,48 @@
 
     <footer id="footer">
         <div class="container">
-            <a href="mailto:contact@dmdhrumilmistry.me">contact@dmdhrumilmistry.me</a>
+            <a href="">jeevan</a>
             <!-- Social links -->
             <div class="social">
-                <a href="https://twitter.com/dmdhrumilmistry"><img
+                <a href="https://twitter.com/"><img
                         src="{{ url_for('static', filename='assets/twitter-icon.svg') }}" alt="Twitter"
                         style="border-radius: 0px;"></a>
-                <a href="https://linkedin.com/in/dmdhrumilmistry"><img
+                <a href="https://www.linkedin.com/in/jeevan-c/"><img
                         src="{{ url_for('static', filename='assets/linkedin-icon.svg') }}" alt="Linkedin"
                         style="border-radius: 0px;"></a>
-                <a href="https://t.me/anyonymous_dude"><img
-                        src="{{ url_for('static', filename='assets/telegram.svg') }}" alt="Telegram"></a>
-                <a href="https://github.com/dmdhrumilmistry"><img
+                <a href="https://hub.docker.com/repositories/jeevanc31"><img
+                        src="{{ url_for('static', filename='assets/docker.svg') }}" alt="Docker"></a>
+                <a href="https://github.com/JeevanC31"><img
                         src="{{ url_for('static', filename='assets/github-icon.svg') }}" alt="GitHub"
                         style="border-radius: 0px;"></a>
             </div>
             <!-- Attribution -->
-            <p>Copyright &copy; dmdhrumilmistry 2022, All rights reserved</p>
+            <p>Copyright &copy; Jeevan 2025, All rights reserved</p>
         </div>
     </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script>
+  const text = "Jeevan C";
+  let index = 0;
+  function typeWriter() {
+    if (index < text.length) {
+      document.getElementById("typewriter").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 150);
+    } else {
+      setTimeout(() => {
+        document.getElementById("typewriter").innerHTML = "";
+        index = 0;
+        typeWriter();
+      }, 2000);
+    }
+  }
+  typeWriter();
+  
+</script>
+</body>
+
+      
 </body>
 
 </html>

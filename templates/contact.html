@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block headersection %}
-<section class="header-container">
+<section style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: -1rem; padding: 1rem;">
     <div class="content-text">
         <h2>Contact Page</h2>
     </div>
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block body %}
-<div class="project-container container" style="padding: 100px;">
+<div class="project-container container" >
     {% if contact_status == true %}
     <div class="isa_success">
         <i class="fa fa-check"></i>
@@ -42,7 +42,7 @@
         <label for="contactnum">
             <h3>Contact Number</h3>
         </label>
-        <input type="text" id="phone" name="phone" placeholder="+919876543210" required>
+        <input type="text" id="phone" name="phone" placeholder="8105201243" required>
 
         <label for="subject">
             <h3>Contact Reason</h3>

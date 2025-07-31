@@ -1,5 +1,4 @@
-flask
-requests
-flask-migrate
-waitress
-gunicorn
+Flask==2.3.3
+requests==2.31.0
+Flask-Mail==0.9.1
+python-dotenv==1.0.1

@@ -1,40 +1,28 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<!-- Projects -->
-<section id="projects" class="project-container container">
-    <div class="content-text">
-        <h2>Public Github Repos</h2>
+<section id="projects" class="project-container container py-5">
+    <div class="content-text mb-4 text-center">
+        <h2>Public GitHub Repos</h2>
     </div>
 
-    <article class="project">
+    <div class="row">
         {% for card in cards %}
-        <!-- <div href="{{card.html_url}}" class="card" style="background: '{{card.html_url}}'">
-            <div class="project-info">
-                <div class="project-bio">
-                    <h3>{{card.name}}</h3>
-                    <p>{{card.language}}</p>
-                    <p>{{card.description}}</p>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ card.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ card.language }}</h6>
+                    <p class="card-text">{{ card.description }}</p>
                 </div>
-
-                <div class="project-link">
-                    <a href="{{card.html_url}}"><i class="fab fa-github"></i></a>
+                <div class="card-footer bg-transparent border-0">
+                    <a href="{{ card.html_url }}" class="btn btn-dark" target="_blank">
+                        View Project <i class="fab fa-github"></i>
+                    </a>
                 </div>
-            </div>
-        </div> -->
-
-        <div class="textcard">
-            <div class="container">
-                <h3>{{card.name}}</h3>
-                <p>{{card.language}}</p>
-                <p>{{card.description}}</p>
-            </div>
-            <div class="container">
-                <a href="{{card.html_url}}" class="btn btn-secondary">View Project <i class="fab fa-github"></i></a>
             </div>
         </div>
-
         {% endfor %}
-    </article>
+    </div>
 </section>
 {% endblock %}
